@@ -1,0 +1,61 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "elascic-search",
+  "title": "Elascic Search",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "kabocha",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Search",
+      "description": "Search",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "baseUrl",
+      "type": "textfield",
+      "required": true,
+      "title": "Elastic URL",
+      "description": "Your elastic search url.",
+      "placeholder": "See tinyurl.com/raycast-slack-status"
+    },
+    {
+      "name": "engineName",
+      "type": "textfield",
+      "required": true,
+      "title": "Elastic Engine Name",
+      "description": "Your elastic search engine name.",
+      "placeholder": "See tinyurl.com/raycast-slack-status"
+    },
+    {
+      "name": "apikey",
+      "type": "password",
+      "required": true,
+      "title": "Elastic App Search API",
+      "description": "Your search API.",
+      "placeholder": "See tinyurl.com/raycast-slack-status"
+    }
+  ],
+  "dependencies": {
+    "@elastic/app-search-node": "^7.15.0",
+    "@raycast/api": "^1.26.2"
+  },
+  "devDependencies": {
+    "@types/node": "~16.10.0",
+    "@types/react": "^17.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "react-devtools": "^4.19.2",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}
